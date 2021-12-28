@@ -23,7 +23,7 @@ jobs:
         with:
           ruby-version: 2.6
       - name: Install Curb
-        run: sudo apt-get install libcurl3 libcurl3-gnutls libcurl4-openssl-dev
+        run: sudo apt-get install libcurl4 libcurl4-gnutls libcurl4-openssl-dev
       - name: Install dependencies
         run: bundle install
       - name: Run tests
