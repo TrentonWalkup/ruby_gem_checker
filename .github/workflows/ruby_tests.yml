@@ -22,7 +22,9 @@ jobs:
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           ruby-version: 2.6
+      - name: Install Curb
+        run: sudo apt-get install libcurl4 libcurl3-gnutls libcurl4-openssl-dev
       - name: Install dependencies
         run: bundle install
       - name: Run tests
-        run: bundle exec rake
+        run: bundle exec rspec
